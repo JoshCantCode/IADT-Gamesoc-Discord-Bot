@@ -1,0 +1,34 @@
+{
+  "name": "gamesoc-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.24.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@11.24.0",
+  "type": "module",
+  "dependencies": {
+    "@slipher/player": "^0.1.0",
+    "@slipher/voice": "^0.1.0",
+    "dotenv": "^18.0.5",
+    "seyfert": "^5.1.0"
+  },
+  "devDependencies": {
+    "@slipher/eslint-plugin": "^1.0.0",
+    "@types/node": "^26.6.3",
+    "eslint": "^10.11.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.0"
+  }
+}
