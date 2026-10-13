@@ -19,3 +19,7 @@ services:
       - kokoro
     volumes:
       - ./commands.json:/bot/commands.json
+      - whitelist-data:/bot/data
+
+volumes:
+  whitelist-data:

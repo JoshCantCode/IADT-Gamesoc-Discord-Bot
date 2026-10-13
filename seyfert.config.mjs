@@ -5,6 +5,7 @@ import { GatewayIntentBits } from "seyfert";
 export default config.bot({
   token: process.env.BOT_TOKEN ?? "",
   locations: {
+      components: "components",
       base: "dist",
       commands: "commands"
   },

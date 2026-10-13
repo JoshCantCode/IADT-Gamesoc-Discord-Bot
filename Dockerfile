@@ -37,10 +37,11 @@ COPY --from=build $DIR/dist ./dist
 COPY --from=build $DIR/package.json ./package.json
 COPY --from=build $DIR/seyfert.config.mjs ./seyfert.config.mjs
 
-RUN chown node:node $DIR
+RUN mkdir -p $DIR/data
+RUN chown -R node:node $DIR
 RUN apk add --no-cache ffmpeg
 
 ENV NODE_ENV=production
 ENV USER=node
 USER $USER
-ENTRYPOINT ["dumb-init", "node", "dist/index.js"]
+ENTRYPOINT ["dumb-init", "node", "--disable-warning=ExperimentalWarning", "dist/index.js"]
